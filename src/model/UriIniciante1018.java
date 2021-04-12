@@ -1,11 +1,11 @@
 package model;
 
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class MainExercicios {
+public class UriIniciante1018 {
 
 	public static void main(String[] args) {
+
 
 		Scanner entrada = new Scanner(System.in);
 		
@@ -13,14 +13,7 @@ public class MainExercicios {
 		
 		
 		if (valor >= 0 && valor <= 1000000.00) {
-
-			calcNotas(valor);
-		}
-
-	}
-
-	public static void calcNotas(double valor) {
-		int calc=0;
+        	int calc=0;
 		
 		int notas[] = { 100, 50, 20, 10, 5, 2 };
 
@@ -35,25 +28,23 @@ public class MainExercicios {
 				valor = valor % notas[i];
 				
 			}
+			
 		}
-		calcMoedas(valor);
-	}
-
-	public static void calcMoedas(double valor) {
-
-		float moedas[] = { 1.0F, 0.50F, 0.25F, 0.10F, 0.05F, 0.01F };
+    	float moedas[] = { 1.0F, 0.50F, 0.25F, 0.10F, 0.05F, 0.01F };
 
 		System.out.println("MOEDAS:");
 
 		
-			for (int i = 0; i <= moedas.length - 1; i++) {
+			for (int j = 0; j <= moedas.length - 1; j++) {
 
-				float calc =(float) valor / moedas[i];
+				float result =(float) valor / moedas[j];
 				
 				if(calc>=0) {
-				System.out.printf("%d moeda(s) de R$ %.2f\n", (int)calc, moedas[i]);
-				valor = valor % moedas[i];
+				System.out.printf("%d moeda(s) de R$ %.2f\n", (int)calc, moedas[j]);
+				valor = valor % moedas[j];
 				}
 		}
 	}
+
+   }
 }
